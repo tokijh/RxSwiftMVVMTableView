@@ -8,10 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		5CD363C9203D5003003216C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363C8203D5003003216C4 /* AppDelegate.swift */; };
-		5CD363CB203D5003003216C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363CA203D5003003216C4 /* ViewController.swift */; };
-		5CD363CE203D5003003216C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD363CC203D5003003216C4 /* Main.storyboard */; };
 		5CD363D0203D5003003216C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD363CF203D5003003216C4 /* Assets.xcassets */; };
 		5CD363D3203D5003003216C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD363D1203D5003003216C4 /* LaunchScreen.storyboard */; };
+		5CD363DC203D52E1003216C4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363DB203D52E1003216C4 /* BaseViewController.swift */; };
+		5CD363DE203D537C003216C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363DD203D537C003216C4 /* MainViewController.swift */; };
+		5CD363E9203D5581003216C4 /* RxAlamofire+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363E8203D5581003216C4 /* RxAlamofire+ObjectMapper.swift */; };
+		5CD363EC203D55A7003216C4 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363EB203D55A7003216C4 /* Api.swift */; };
+		5CD363EE203D55BA003216C4 /* Api+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363ED203D55BA003216C4 /* Api+User.swift */; };
+		5CD363F0203D55DC003216C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363EF203D55DC003216C4 /* User.swift */; };
+		5CD363F3203D562D003216C4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363F2203D562D003216C4 /* MainViewModel.swift */; };
+		5CD363F7203D575E003216C4 /* DisposeBagExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363F6203D575E003216C4 /* DisposeBagExtension.swift */; };
+		5CD363FA203D57A4003216C4 /* UserTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363F9203D57A4003216C4 /* UserTableCell.swift */; };
+		5CD363FC203D5A6C003216C4 /* FirstSectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363FB203D5A6C003216C4 /* FirstSectionTableCell.swift */; };
+		5CD363FE203D5F32003216C4 /* SecondSectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD363FD203D5F32003216C4 /* SecondSectionTableCell.swift */; };
 		B90882A2A46602EF72F2ACE2 /* Pods_RxSwiftMVVMTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC273006D6D399E8D860785 /* Pods_RxSwiftMVVMTableView.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +29,20 @@
 		12A1ACA45DF924C586F566A8 /* Pods-RxSwiftMVVMTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMVVMTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftMVVMTableView/Pods-RxSwiftMVVMTableView.release.xcconfig"; sourceTree = "<group>"; };
 		5CD363C5203D5003003216C4 /* RxSwiftMVVMTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftMVVMTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD363C8203D5003003216C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5CD363CA203D5003003216C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5CD363CD203D5003003216C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CD363CF203D5003003216C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CD363D2203D5003003216C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CD363D4203D5003003216C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CD363DB203D52E1003216C4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5CD363DD203D537C003216C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5CD363E8203D5581003216C4 /* RxAlamofire+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxAlamofire+ObjectMapper.swift"; sourceTree = "<group>"; };
+		5CD363EB203D55A7003216C4 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		5CD363ED203D55BA003216C4 /* Api+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+User.swift"; sourceTree = "<group>"; };
+		5CD363EF203D55DC003216C4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5CD363F2203D562D003216C4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5CD363F6203D575E003216C4 /* DisposeBagExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBagExtension.swift; sourceTree = "<group>"; };
+		5CD363F9203D57A4003216C4 /* UserTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableCell.swift; sourceTree = "<group>"; };
+		5CD363FB203D5A6C003216C4 /* FirstSectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSectionTableCell.swift; sourceTree = "<group>"; };
+		5CD363FD203D5F32003216C4 /* SecondSectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSectionTableCell.swift; sourceTree = "<group>"; };
 		901E702EC6F970997CE74A26 /* Pods-RxSwiftMVVMTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMVVMTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftMVVMTableView/Pods-RxSwiftMVVMTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,14 +88,79 @@
 		5CD363C7203D5003003216C4 /* RxSwiftMVVMTableView */ = {
 			isa = PBXGroup;
 			children = (
+				5CD363EA203D559C003216C4 /* Api */,
+				5CD363E7203D5578003216C4 /* Utils */,
+				5CD363E4203D54ED003216C4 /* Models */,
+				5CD363E0203D5432003216C4 /* Cells */,
+				5CD363DA203D52D3003216C4 /* ViewControllers */,
+				5CD363F1203D5618003216C4 /* ViewModels */,
 				5CD363C8203D5003003216C4 /* AppDelegate.swift */,
-				5CD363CA203D5003003216C4 /* ViewController.swift */,
-				5CD363CC203D5003003216C4 /* Main.storyboard */,
 				5CD363CF203D5003003216C4 /* Assets.xcassets */,
 				5CD363D1203D5003003216C4 /* LaunchScreen.storyboard */,
 				5CD363D4203D5003003216C4 /* Info.plist */,
 			);
 			path = RxSwiftMVVMTableView;
+			sourceTree = "<group>";
+		};
+		5CD363DA203D52D3003216C4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5CD363DB203D52E1003216C4 /* BaseViewController.swift */,
+				5CD363DD203D537C003216C4 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5CD363E0203D5432003216C4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5CD363E1203D5436003216C4 /* TableViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5CD363E1203D5436003216C4 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5CD363F9203D57A4003216C4 /* UserTableCell.swift */,
+				5CD363FB203D5A6C003216C4 /* FirstSectionTableCell.swift */,
+				5CD363FD203D5F32003216C4 /* SecondSectionTableCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		5CD363E4203D54ED003216C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5CD363EF203D55DC003216C4 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5CD363E7203D5578003216C4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5CD363E8203D5581003216C4 /* RxAlamofire+ObjectMapper.swift */,
+				5CD363F6203D575E003216C4 /* DisposeBagExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5CD363EA203D559C003216C4 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				5CD363EB203D55A7003216C4 /* Api.swift */,
+				5CD363ED203D55BA003216C4 /* Api+User.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		5CD363F1203D5618003216C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5CD363F2203D562D003216C4 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		88C484123F39592D6E1D038E /* Frameworks */ = {
@@ -152,7 +235,6 @@
 			files = (
 				5CD363D3203D5003003216C4 /* LaunchScreen.storyboard in Resources */,
 				5CD363D0203D5003003216C4 /* Assets.xcassets in Resources */,
-				5CD363CE203D5003003216C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +281,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxSwiftMVVMTableView/Pods-RxSwiftMVVMTableView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -208,8 +292,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -227,22 +313,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD363CB203D5003003216C4 /* ViewController.swift in Sources */,
+				5CD363E9203D5581003216C4 /* RxAlamofire+ObjectMapper.swift in Sources */,
+				5CD363FE203D5F32003216C4 /* SecondSectionTableCell.swift in Sources */,
 				5CD363C9203D5003003216C4 /* AppDelegate.swift in Sources */,
+				5CD363DC203D52E1003216C4 /* BaseViewController.swift in Sources */,
+				5CD363EE203D55BA003216C4 /* Api+User.swift in Sources */,
+				5CD363EC203D55A7003216C4 /* Api.swift in Sources */,
+				5CD363F0203D55DC003216C4 /* User.swift in Sources */,
+				5CD363FC203D5A6C003216C4 /* FirstSectionTableCell.swift in Sources */,
+				5CD363DE203D537C003216C4 /* MainViewController.swift in Sources */,
+				5CD363F7203D575E003216C4 /* DisposeBagExtension.swift in Sources */,
+				5CD363FA203D57A4003216C4 /* UserTableCell.swift in Sources */,
+				5CD363F3203D562D003216C4 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5CD363CC203D5003003216C4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CD363CD203D5003003216C4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5CD363D1203D5003003216C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

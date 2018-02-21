@@ -12,6 +12,9 @@ target 'RxSwiftMVVMTableView' do
   pod 'RxCocoa',		'~> 4.0'
   pod 'RxDataSources',	'~> 3.0'
 
+  # Network
+  pod 'RxAlamofire',    '~> 4.0.0'
+
   # UI
   pod 'SnapKit',		'~> 4.0'
 
