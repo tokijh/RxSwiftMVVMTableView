@@ -13,9 +13,9 @@ import RxCocoa
 class MainViewController: BaseViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(FirstSectionTableCell.self, forCellReuseIdentifier: FirstSectionTableCell.Identifier)
-        tableView.register(SecondSectionTableCell.self, forCellReuseIdentifier: SecondSectionTableCell.Identifier)
         tableView.register(UserTableCell.self, forCellReuseIdentifier: UserTableCell.Identifier)
+        tableView.register(TodoTableCell.self, forCellReuseIdentifier: TodoTableCell.Identifier)
+        tableView.register(PostTableCell.self, forCellReuseIdentifier: PostTableCell.Identifier)
         return tableView
     }()
     

@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Todo.swift
 //  RxSwiftMVVMTableView
 //
 //  Created by tokijh on 2018. 2. 21..
@@ -8,13 +8,14 @@
 
 import ObjectMapper
 
-class User: Mappable {
+class Todo: Mappable {
     
-    var name: String = ""
+    var title: String = ""
     
     required convenience init?(map: Map) { self.init() }
     
     func mapping(map: Map) {
-        name <- map["name"]
+        title <- map["title"]
     }
 }
+

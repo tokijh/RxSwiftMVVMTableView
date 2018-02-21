@@ -1,5 +1,5 @@
 //
-//  Api+User.swift
+//  Api+Post.swift
 //  RxSwiftMVVMTableView
 //
 //  Created by tokijh on 2018. 2. 21..
@@ -11,11 +11,11 @@ import RxAlamofire
 import ObjectMapper
 
 extension Api {
-    final class User {
-        open class func get() -> Observable<[RxSwiftMVVMTableView.User]> {
-            return json(.get, "\(Api.baseUrl)/users")
+    final class Post {
+        open class func get() -> Observable<[RxSwiftMVVMTableView.Post]> {
+            return json(.get, "\(Api.baseUrl)/posts")
                 .debug()
-                .mapArray(type: RxSwiftMVVMTableView.User.self)
+                .mapArray(type: RxSwiftMVVMTableView.Post.self)
         }
     }
 }

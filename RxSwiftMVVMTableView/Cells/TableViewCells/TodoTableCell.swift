@@ -1,5 +1,5 @@
 //
-//  SecondSectionTableCell.swift
+//  TodoTableCell.swift
 //  RxSwiftMVVMTableView
 //
 //  Created by tokijh on 2018. 2. 21..
@@ -9,13 +9,12 @@
 import UIKit
 import SnapKit
 
-class SecondSectionTableCell: UITableViewCell {
+class TodoTableCell: UITableViewCell {
     
-    public static let Identifier = "SecondSectionTableCell"
+    public static let Identifier = "TodoTableCell"
     
     lazy var label: UILabel = {
         let label = UILabel()
-        label.text = "This is second section cell"
         return label
     }()
     
@@ -44,4 +43,3 @@ class SecondSectionTableCell: UITableViewCell {
         }
     }
 }
-

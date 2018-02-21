@@ -1,5 +1,5 @@
 //
-//  FirstSectionTableCell.swift
+//  PostTableCell.swift
 //  RxSwiftMVVMTableView
 //
 //  Created by tokijh on 2018. 2. 21..
@@ -9,13 +9,12 @@
 import UIKit
 import SnapKit
 
-class FirstSectionTableCell: UITableViewCell {
+class PostTableCell: UITableViewCell {
     
-    public static let Identifier = "FirstSectionTableCell"
+    public static let Identifier = "PostTableCell"
     
     lazy var label: UILabel = {
         let label = UILabel()
-        label.text = "This is first section cell"
         return label
     }()
     

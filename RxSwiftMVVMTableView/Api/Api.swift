@@ -7,5 +7,5 @@
 //
 
 class Api {
-    static let baseUrl = "http://api.randomuser.me/"
+    static let baseUrl = "https://jsonplaceholder.typicode.com"
 }
