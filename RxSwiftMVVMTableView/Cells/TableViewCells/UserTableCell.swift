@@ -8,10 +8,13 @@
 
 import UIKit
 import SnapKit
+import RxSwift
 
 class UserTableCell: UITableViewCell {
     
     public static let Identifier = "UserTableCell"
+    
+    var disposeBag = DisposeBag()
     
     lazy var label: UILabel = {
         let label = UILabel()
@@ -28,7 +31,13 @@ class UserTableCell: UITableViewCell {
         initView()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.disposeBag = DisposeBag()
+    }
+    
     func initView() {
+        self.selectionStyle = .none
         appendSubViews()
         setConstraints()
     }

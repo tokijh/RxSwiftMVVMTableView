@@ -7,6 +7,7 @@
 //
 
 import ObjectMapper
+import RxSwift
 
 class Todo: Mappable {
     
@@ -19,3 +20,8 @@ class Todo: Mappable {
     }
 }
 
+extension Todo {
+    open class func load(_ todos: Variable<[Todo]>) -> Disposable {
+        return Api.Todo.get().catchErrorJustReturn([]).bind(to: todos)
+    }
+}

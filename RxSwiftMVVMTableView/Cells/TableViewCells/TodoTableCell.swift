@@ -8,10 +8,13 @@
 
 import UIKit
 import SnapKit
+import RxSwift
 
 class TodoTableCell: UITableViewCell {
     
     public static let Identifier = "TodoTableCell"
+    
+    var disposeBag = DisposeBag()
     
     lazy var label: UILabel = {
         let label = UILabel()
@@ -28,7 +31,13 @@ class TodoTableCell: UITableViewCell {
         initView()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.disposeBag = DisposeBag()
+    }
+    
     func initView() {
+        self.selectionStyle = .none
         appendSubViews()
         setConstraints()
     }

@@ -26,6 +26,7 @@
 		5CD36409203D6D14003216C4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD36408203D6D14003216C4 /* Post.swift */; };
 		5CD3640B203D6D32003216C4 /* Api+Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3640A203D6D32003216C4 /* Api+Todo.swift */; };
 		5CD3640D203D6D6A003216C4 /* Api+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3640C203D6D6A003216C4 /* Api+Post.swift */; };
+		5CD36410203D7990003216C4 /* MainSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3640F203D7990003216C4 /* MainSectionData.swift */; };
 		B90882A2A46602EF72F2ACE2 /* Pods_RxSwiftMVVMTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC273006D6D399E8D860785 /* Pods_RxSwiftMVVMTableView.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		5CD36408203D6D14003216C4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5CD3640A203D6D32003216C4 /* Api+Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Todo.swift"; sourceTree = "<group>"; };
 		5CD3640C203D6D6A003216C4 /* Api+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Post.swift"; sourceTree = "<group>"; };
+		5CD3640F203D7990003216C4 /* MainSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSectionData.swift; sourceTree = "<group>"; };
 		901E702EC6F970997CE74A26 /* Pods-RxSwiftMVVMTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMVVMTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftMVVMTableView/Pods-RxSwiftMVVMTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 		5CD363E0203D5432003216C4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5CD3640E203D7975003216C4 /* SectionDatas */,
 				5CD363E1203D5436003216C4 /* TableViewCells */,
 			);
 			path = Cells;
@@ -178,6 +181,14 @@
 				5CD363F2203D562D003216C4 /* MainViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5CD3640E203D7975003216C4 /* SectionDatas */ = {
+			isa = PBXGroup;
+			children = (
+				5CD3640F203D7990003216C4 /* MainSectionData.swift */,
+			);
+			path = SectionDatas;
 			sourceTree = "<group>";
 		};
 		88C484123F39592D6E1D038E /* Frameworks */ = {
@@ -305,6 +316,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
@@ -316,6 +328,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -334,6 +347,7 @@
 				5CD36405203D6CC2003216C4 /* TodoTableCell.swift in Sources */,
 				5CD363E9203D5581003216C4 /* RxAlamofire+ObjectMapper.swift in Sources */,
 				5CD363C9203D5003003216C4 /* AppDelegate.swift in Sources */,
+				5CD36410203D7990003216C4 /* MainSectionData.swift in Sources */,
 				5CD363DC203D52E1003216C4 /* BaseViewController.swift in Sources */,
 				5CD3640D203D6D6A003216C4 /* Api+Post.swift in Sources */,
 				5CD363EE203D55BA003216C4 /* Api+User.swift in Sources */,

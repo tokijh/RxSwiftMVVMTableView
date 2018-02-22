@@ -7,6 +7,7 @@
 //
 
 import ObjectMapper
+import RxSwift
 
 class Post: Mappable {
     
@@ -16,5 +17,11 @@ class Post: Mappable {
     
     func mapping(map: Map) {
         title <- map["title"]
+    }
+}
+
+extension Post {
+    open class func load(_ posts: Variable<[Post]>) -> Disposable {
+        return Api.Post.get().catchErrorJustReturn([]).bind(to: posts)
     }
 }

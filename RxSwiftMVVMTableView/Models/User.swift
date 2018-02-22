@@ -7,6 +7,7 @@
 //
 
 import ObjectMapper
+import RxSwift
 
 class User: Mappable {
     
@@ -16,5 +17,11 @@ class User: Mappable {
     
     func mapping(map: Map) {
         name <- map["name"]
+    }
+}
+
+extension User {
+    open class func load(_ users: Variable<[User]>) -> Disposable {
+        return Api.User.get().catchErrorJustReturn([]).bind(to: users)
     }
 }
