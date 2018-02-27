@@ -77,7 +77,7 @@ class MainViewController: BaseViewController {
                     if let cell = tableView.dequeueReusableCell(withIdentifier: UserTableCell.Identifier, for: indexPath) as? UserTableCell {
                         cell.configure(viewModel: UserTableCellViewModel(user: user))
                         cell.label.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
-                            self?.viewModel.userCellResult.value = .click(user: user)
+                            self?.viewModel.userCellResult.accept(.click(user: user))
                         }.disposed(by: cell.disposeBag)
                         return cell
                     }
@@ -85,7 +85,7 @@ class MainViewController: BaseViewController {
                     if let cell = tableView.dequeueReusableCell(withIdentifier: TodoTableCell.Identifier, for: indexPath) as? TodoTableCell {
                         cell.configure(viewModel: TodoTableCellViewModel(todo: todo))
                         cell.label.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
-                            self?.viewModel.todoCellResult.value = .click(todo: todo)
+                            self?.viewModel.todoCellResult.accept(.click(todo: todo))
                         }.disposed(by: cell.disposeBag)
                         return cell
                     }
@@ -93,7 +93,7 @@ class MainViewController: BaseViewController {
                     if let cell = tableView.dequeueReusableCell(withIdentifier: PostTableCell.Identifier, for: indexPath) as? PostTableCell {
                         cell.configure(viewModel: PostTableCellViewModel(post: post))
                         cell.label.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
-                            self?.viewModel.postCellResult.value = .click(post: post)
+                            self?.viewModel.postCellResult.accept(.click(post: post))
                         }.disposed(by: cell.disposeBag)
                         return cell
                     }

@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class Post: Codable {
     
@@ -15,7 +16,7 @@ class Post: Codable {
 }
 
 extension Post {
-    open class func load(_ posts: Variable<[Post]>) -> Disposable {
+    open class func load(_ posts: BehaviorRelay<[Post]>) -> Disposable {
         return Api.Post.get().catchErrorJustReturn([]).bind(to: posts)
     }
 }

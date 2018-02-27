@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class Todo: Codable {
     
@@ -15,7 +16,7 @@ class Todo: Codable {
 }
 
 extension Todo {
-    open class func load(_ todos: Variable<[Todo]>) -> Disposable {
+    open class func load(_ todos: BehaviorRelay<[Todo]>) -> Disposable {
         return Api.Todo.get().catchErrorJustReturn([]).bind(to: todos)
     }
 }

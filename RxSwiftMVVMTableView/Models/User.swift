@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class User: Codable {
     
@@ -15,7 +16,7 @@ class User: Codable {
 }
 
 extension User {
-    open class func load(_ users: Variable<[User]>) -> Disposable {
+    open class func load(_ users: BehaviorRelay<[User]>) -> Disposable {
         return Api.User.get().catchErrorJustReturn([]).bind(to: users)
     }
 }

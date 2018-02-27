@@ -7,16 +7,17 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class MainViewModel {
     
-    let users = Variable<[User]>([])
-    let todos = Variable<[Todo]>([])
-    let posts = Variable<[Post]>([])
+    let users = BehaviorRelay<[User]>(value: [])
+    let todos = BehaviorRelay<[Todo]>(value: [])
+    let posts = BehaviorRelay<[Post]>(value: [])
     
-    let userCellResult = Variable<UserCellResult>(.none)
-    let todoCellResult = Variable<TodoCellResult>(.none)
-    let postCellResult = Variable<PostCellResult>(.none)
+    let userCellResult = BehaviorRelay<UserCellResult>(value: .none)
+    let todoCellResult = BehaviorRelay<TodoCellResult>(value: .none)
+    let postCellResult = BehaviorRelay<PostCellResult>(value: .none)
     
     let disposeBag = DisposeBag()
     
