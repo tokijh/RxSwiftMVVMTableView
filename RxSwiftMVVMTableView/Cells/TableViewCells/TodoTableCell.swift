@@ -14,6 +14,7 @@ class TodoTableCell: UITableViewCell {
     
     public static let Identifier = "TodoTableCell"
     
+    var viewModel: TodoTableCellViewModel?
     var disposeBag = DisposeBag()
     
     lazy var label: UILabel = {
@@ -50,5 +51,10 @@ class TodoTableCell: UITableViewCell {
         self.label.snp.makeConstraints {
             $0.edges.equalTo(self.contentView).inset(UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
         }
+    }
+    
+    func configure(viewModel: TodoTableCellViewModel) {
+        self.viewModel = viewModel
+        label.text = viewModel.label
     }
 }

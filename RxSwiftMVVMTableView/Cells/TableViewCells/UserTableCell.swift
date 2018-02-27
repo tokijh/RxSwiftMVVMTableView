@@ -14,6 +14,7 @@ class UserTableCell: UITableViewCell {
     
     public static let Identifier = "UserTableCell"
     
+    var viewModel: UserTableCellViewModel?
     var disposeBag = DisposeBag()
     
     lazy var label: UILabel = {
@@ -50,5 +51,10 @@ class UserTableCell: UITableViewCell {
         self.label.snp.makeConstraints {
             $0.edges.equalTo(self.contentView).inset(UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
         }
+    }
+    
+    func configure(viewModel: UserTableCellViewModel) {
+        self.viewModel = viewModel
+        label.text = viewModel.label
     }
 }

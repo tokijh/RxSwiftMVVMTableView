@@ -6,18 +6,12 @@
 //  Copyright © 2018년 tokijh. All rights reserved.
 //
 
-import ObjectMapper
 import RxSwift
 
-class User: Mappable {
+class User: Codable {
     
     var name: String = ""
     
-    required convenience init?(map: Map) { self.init() }
-    
-    func mapping(map: Map) {
-        name <- map["name"]
-    }
 }
 
 extension User {

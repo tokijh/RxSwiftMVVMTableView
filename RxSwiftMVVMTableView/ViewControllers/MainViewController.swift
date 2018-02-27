@@ -75,7 +75,7 @@ class MainViewController: BaseViewController {
                 switch dataSource[indexPath] {
                 case .user(let user):
                     if let cell = tableView.dequeueReusableCell(withIdentifier: UserTableCell.Identifier, for: indexPath) as? UserTableCell {
-                        cell.label.text = user.name
+                        cell.configure(viewModel: UserTableCellViewModel(user: user))
                         cell.label.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
                             self?.viewModel.userCellResult.value = .click(user: user)
                         }.disposed(by: cell.disposeBag)
@@ -83,7 +83,7 @@ class MainViewController: BaseViewController {
                     }
                 case .todo(let todo):
                     if let cell = tableView.dequeueReusableCell(withIdentifier: TodoTableCell.Identifier, for: indexPath) as? TodoTableCell {
-                        cell.label.text = todo.title
+                        cell.configure(viewModel: TodoTableCellViewModel(todo: todo))
                         cell.label.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
                             self?.viewModel.todoCellResult.value = .click(todo: todo)
                         }.disposed(by: cell.disposeBag)
@@ -91,7 +91,7 @@ class MainViewController: BaseViewController {
                     }
                 case .post(let post):
                     if let cell = tableView.dequeueReusableCell(withIdentifier: PostTableCell.Identifier, for: indexPath) as? PostTableCell {
-                        cell.label.text = post.title
+                        cell.configure(viewModel: PostTableCellViewModel(post: post))
                         cell.label.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
                             self?.viewModel.postCellResult.value = .click(post: post)
                         }.disposed(by: cell.disposeBag)

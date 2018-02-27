@@ -14,6 +14,7 @@ class PostTableCell: UITableViewCell {
     
     public static let Identifier = "PostTableCell"
     
+    var viewModel: PostTableCellViewModel?
     var disposeBag = DisposeBag()
     
     lazy var label: UILabel = {
@@ -50,5 +51,10 @@ class PostTableCell: UITableViewCell {
         self.label.snp.makeConstraints {
             $0.edges.equalTo(self.contentView).inset(UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
         }
+    }
+    
+    func configure(viewModel: PostTableCellViewModel) {
+        self.viewModel = viewModel
+        label.text = viewModel.label
     }
 }

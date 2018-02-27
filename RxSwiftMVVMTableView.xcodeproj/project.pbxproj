@@ -27,6 +27,10 @@
 		5CD3640B203D6D32003216C4 /* Api+Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3640A203D6D32003216C4 /* Api+Todo.swift */; };
 		5CD3640D203D6D6A003216C4 /* Api+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3640C203D6D6A003216C4 /* Api+Post.swift */; };
 		5CD36410203D7990003216C4 /* MainSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3640F203D7990003216C4 /* MainSectionData.swift */; };
+		5CD3641F2043CDA8003216C4 /* UserTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3641E2043CDA8003216C4 /* UserTableCellViewModel.swift */; };
+		5CD364212043D1E3003216C4 /* RxAlamofire+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD364202043D1E3003216C4 /* RxAlamofire+Codable.swift */; };
+		5CD3646F20451766003216C4 /* TodoTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3646E20451765003216C4 /* TodoTableCellViewModel.swift */; };
+		5CD364712045178C003216C4 /* PostTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD364702045178C003216C4 /* PostTableCellViewModel.swift */; };
 		B90882A2A46602EF72F2ACE2 /* Pods_RxSwiftMVVMTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC273006D6D399E8D860785 /* Pods_RxSwiftMVVMTableView.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,10 @@
 		5CD3640A203D6D32003216C4 /* Api+Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Todo.swift"; sourceTree = "<group>"; };
 		5CD3640C203D6D6A003216C4 /* Api+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Post.swift"; sourceTree = "<group>"; };
 		5CD3640F203D7990003216C4 /* MainSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSectionData.swift; sourceTree = "<group>"; };
+		5CD3641E2043CDA8003216C4 /* UserTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableCellViewModel.swift; sourceTree = "<group>"; };
+		5CD364202043D1E3003216C4 /* RxAlamofire+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxAlamofire+Codable.swift"; sourceTree = "<group>"; };
+		5CD3646E20451765003216C4 /* TodoTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableCellViewModel.swift; sourceTree = "<group>"; };
+		5CD364702045178C003216C4 /* PostTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableCellViewModel.swift; sourceTree = "<group>"; };
 		901E702EC6F970997CE74A26 /* Pods-RxSwiftMVVMTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMVVMTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftMVVMTableView/Pods-RxSwiftMVVMTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				5CD363E8203D5581003216C4 /* RxAlamofire+ObjectMapper.swift */,
+				5CD364202043D1E3003216C4 /* RxAlamofire+Codable.swift */,
 				5CD363F6203D575E003216C4 /* DisposeBagExtension.swift */,
 			);
 			path = Utils;
@@ -179,6 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				5CD363F2203D562D003216C4 /* MainViewModel.swift */,
+				5CD3641E2043CDA8003216C4 /* UserTableCellViewModel.swift */,
+				5CD3646E20451765003216C4 /* TodoTableCellViewModel.swift */,
+				5CD364702045178C003216C4 /* PostTableCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -348,16 +360,20 @@
 				5CD363E9203D5581003216C4 /* RxAlamofire+ObjectMapper.swift in Sources */,
 				5CD363C9203D5003003216C4 /* AppDelegate.swift in Sources */,
 				5CD36410203D7990003216C4 /* MainSectionData.swift in Sources */,
+				5CD364712045178C003216C4 /* PostTableCellViewModel.swift in Sources */,
 				5CD363DC203D52E1003216C4 /* BaseViewController.swift in Sources */,
+				5CD364212043D1E3003216C4 /* RxAlamofire+Codable.swift in Sources */,
 				5CD3640D203D6D6A003216C4 /* Api+Post.swift in Sources */,
 				5CD363EE203D55BA003216C4 /* Api+User.swift in Sources */,
 				5CD3640B203D6D32003216C4 /* Api+Todo.swift in Sources */,
+				5CD3646F20451766003216C4 /* TodoTableCellViewModel.swift in Sources */,
 				5CD36409203D6D14003216C4 /* Post.swift in Sources */,
 				5CD363EC203D55A7003216C4 /* Api.swift in Sources */,
 				5CD363F0203D55DC003216C4 /* User.swift in Sources */,
 				5CD363DE203D537C003216C4 /* MainViewController.swift in Sources */,
 				5CD36407203D6CF8003216C4 /* PostTableCell.swift in Sources */,
 				5CD363F7203D575E003216C4 /* DisposeBagExtension.swift in Sources */,
+				5CD3641F2043CDA8003216C4 /* UserTableCellViewModel.swift in Sources */,
 				5CD363FA203D57A4003216C4 /* UserTableCell.swift in Sources */,
 				5CD36403203D6C9A003216C4 /* Todo.swift in Sources */,
 				5CD363F3203D562D003216C4 /* MainViewModel.swift in Sources */,
