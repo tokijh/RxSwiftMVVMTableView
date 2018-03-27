@@ -14,7 +14,6 @@ class TodoTableCell: UITableViewCell {
     
     public static let Identifier = "TodoTableCell"
     
-    var viewModel: TodoTableCellViewModel?
     var disposeBag = DisposeBag()
     
     lazy var label: UILabel = {
@@ -53,8 +52,7 @@ class TodoTableCell: UITableViewCell {
         }
     }
     
-    func configure(viewModel: TodoTableCellViewModel) {
-        self.viewModel = viewModel
-        label.text = viewModel.label
+    func configure(label: String) {
+        self.label.text = label
     }
 }

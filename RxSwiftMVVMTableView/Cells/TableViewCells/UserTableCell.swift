@@ -14,7 +14,6 @@ class UserTableCell: UITableViewCell {
     
     public static let Identifier = "UserTableCell"
     
-    var viewModel: UserTableCellViewModel?
     var disposeBag = DisposeBag()
     
     lazy var label: UILabel = {
@@ -53,8 +52,7 @@ class UserTableCell: UITableViewCell {
         }
     }
     
-    func configure(viewModel: UserTableCellViewModel) {
-        self.viewModel = viewModel
-        label.text = viewModel.label
+    func configure(label: String) {
+        self.label.text = label
     }
 }

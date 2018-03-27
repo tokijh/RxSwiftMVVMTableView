@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     lazy var rootViewController: UIViewController = {
-        let mainViewController = MainViewController()
+        let mainViewController = MainViewController.create(with: MainViewModel())
         return mainViewController
     }()
 

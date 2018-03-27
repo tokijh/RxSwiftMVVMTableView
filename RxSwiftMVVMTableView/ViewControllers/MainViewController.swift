@@ -12,7 +12,7 @@ import RxCocoa
 import RxDataSources
 import RxGesture
 
-class MainViewController: BaseViewController {
+class MainViewController: UIViewController, BaseViewType {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(UserTableCell.self, forCellReuseIdentifier: UserTableCell.Identifier)
@@ -21,13 +21,8 @@ class MainViewController: BaseViewController {
         return tableView
     }()
     
-    let viewModel = MainViewModel()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initView()
-        bind()
-    }
+    var viewModel: MainViewModelType!
+    var disposeBag: DisposeBag!
     
     func initView() {
         appendSubViews()
@@ -44,29 +39,18 @@ class MainViewController: BaseViewController {
         }
     }
     
-    func bind() {
-        self.viewModel.sections.bind(to: tableView.rx.items(dataSource: self.dataSource)).disposed(by: disposeBag)
-        self.viewModel.userCellResult.asDriver().drive(onNext: { [weak self] in
-            switch $0 {
-            case .none: break
-            case .click(let user):
-                self?.alert(title: "Click user", message: user.name)
-            }
-        }).disposed(by: disposeBag)
-        self.viewModel.todoCellResult.asDriver().drive(onNext: { [weak self] in
-            switch $0 {
-            case .none: break
-            case .click(let todo):
-                self?.alert(title: "Click todo", message: todo.title)
-            }
-        }).disposed(by: disposeBag)
-        self.viewModel.postCellResult.asDriver().drive(onNext: { [weak self] in
-            switch $0 {
-            case .none: break
-            case .click(let post):
-                self?.alert(title: "Click post", message: post.title)
-            }
-        }).disposed(by: disposeBag)
+    func bindEvent() {
+        tableView.rx.modelSelected(MainSectionData.Value.self).bind(to: viewModel.didSelectCell).disposed(by: disposeBag)
+        rx.viewWillAppear.bind(to: viewModel.viewWillAppear).disposed(by: disposeBag)
+    }
+    
+    func bindView() {
+        viewModel.sections.drive(tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        viewModel.showAlert
+            .drive(onNext: { [weak self] in
+                self?.alert(title: $0.0, message: $0.1)
+            })
+            .disposed(by: disposeBag)
     }
     
     lazy var dataSource: RxTableViewSectionedReloadDataSource<MainSectionData> = { [unowned self] in
@@ -75,26 +59,17 @@ class MainViewController: BaseViewController {
                 switch dataSource[indexPath] {
                 case .user(let user):
                     if let cell = tableView.dequeueReusableCell(withIdentifier: UserTableCell.Identifier, for: indexPath) as? UserTableCell {
-                        cell.configure(viewModel: UserTableCellViewModel(user: user))
-                        cell.label.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
-                            self?.viewModel.userCellResult.accept(.click(user: user))
-                        }.disposed(by: cell.disposeBag)
+                        cell.configure(label: user.name)
                         return cell
                     }
                 case .todo(let todo):
                     if let cell = tableView.dequeueReusableCell(withIdentifier: TodoTableCell.Identifier, for: indexPath) as? TodoTableCell {
-                        cell.configure(viewModel: TodoTableCellViewModel(todo: todo))
-                        cell.label.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
-                            self?.viewModel.todoCellResult.accept(.click(todo: todo))
-                        }.disposed(by: cell.disposeBag)
+                        cell.configure(label: todo.title)
                         return cell
                     }
                 case .post(let post):
                     if let cell = tableView.dequeueReusableCell(withIdentifier: PostTableCell.Identifier, for: indexPath) as? PostTableCell {
-                        cell.configure(viewModel: PostTableCellViewModel(post: post))
-                        cell.label.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
-                            self?.viewModel.postCellResult.accept(.click(post: post))
-                        }.disposed(by: cell.disposeBag)
+                        cell.configure(label: post.title)
                         return cell
                     }
                 }

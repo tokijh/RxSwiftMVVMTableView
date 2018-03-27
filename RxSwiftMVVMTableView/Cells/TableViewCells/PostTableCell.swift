@@ -14,7 +14,6 @@ class PostTableCell: UITableViewCell {
     
     public static let Identifier = "PostTableCell"
     
-    var viewModel: PostTableCellViewModel?
     var disposeBag = DisposeBag()
     
     lazy var label: UILabel = {
@@ -53,8 +52,7 @@ class PostTableCell: UITableViewCell {
         }
     }
     
-    func configure(viewModel: PostTableCellViewModel) {
-        self.viewModel = viewModel
-        label.text = viewModel.label
+    func configure(label: String) {
+        self.label.text = label
     }
 }
